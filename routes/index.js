@@ -39,6 +39,10 @@ router.get('/main-vol-files', function(req, res, next) {
   res.render('main-vol-files', { title: 'main-vol-files' });
 });
 
+router.get('/signup', function(req, res, next) {
+  res.render('signup', { title: 'main-vol-files' });
+});
+
 // POST
 
 // SIGNUP
