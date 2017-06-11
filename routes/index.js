@@ -47,7 +47,6 @@ router.get('/signup', function(req, res, next) {
 
 // SIGNUP
 router.post('/signmeup', function(req, res, next) {
-  console.log(req.body);
   // Connect to DB.
   MongoClient.connect(dburl, function(err, db) {
     if (err) return console.log(err);
@@ -56,8 +55,8 @@ router.post('/signmeup', function(req, res, next) {
     var user = {"phoneNumber": req.body.phoneNumber,
                 "userName": req.body.userName,
                 "password": req.body.password,
-                "userType": "refugee",
-                "info": "null"};
+                "userType": req.body.userType,
+                "language": req.body.language};
 
     // Add to database.
     db.collection("users").insertOne(user, function(err, res) {
@@ -68,7 +67,7 @@ router.post('/signmeup', function(req, res, next) {
   });
 
   // Change this line to the next page after signup.
-  res.send("Signup Successful");
+  return res.redirect('/main');
 });
 
 
