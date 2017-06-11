@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
+var MongoClient = require('mongodb').MongoClient;
+var dburl = "mongodb://refugeenius:refugeenius123@ds121222.mlab.com:21222/refugeenius"
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -40,6 +43,29 @@ router.get('/main-vol-files', function(req, res, next) {
 // POST
 >>>>>>> ab9490e21d5a281dee58ffe580ef3807f204d2c7
 
+// SIGNUP
+router.post('/signmeup', function(req, res, next) {
+  // Connect to DB.
+  MongoClient.connect(dburl, function(err, db) {
+    if (err) return console.log(err);
+
+    // Document format.
+    var user = {phoneNumber: req.body.phoneNumber,
+                password: req.body.password,
+                userType: "refugee",
+                info: null};
+
+    // Add to database.
+    db.collection("users").insertOne(user, function(err, res) {
+      if (err) return console.log(err);
+      db.close();
+    });
+
+  });
+
+  // Change this line to the next page after signup.
+  res.send("Signup Successful");
+});
 
 
 module.exports = router;
