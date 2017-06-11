@@ -10,6 +10,10 @@ router.get('/main', function(req, res, next) {
   res.render('main', { title: 'main' });
 });
 
+router.get('/main-vol', function(req, res, next) {
+  res.render('main-vol', { title: 'main-vol' });
+});
+
 
 router.get('/progress-student', function(req, res, next) {
   res.render('progress-student', { title: 'progress-student' });
