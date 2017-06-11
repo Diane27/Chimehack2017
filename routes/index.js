@@ -35,6 +35,10 @@ router.get('/whats-next-student', function(req, res, next) {
   res.render('whats-next-student', { title: 'progress-student' });
 });
 
+router.get('/main-vol-files', function(req, res, next) {
+  res.render('main-vol-files', { title: 'main-vol-files' });
+});
+
 
 
 
