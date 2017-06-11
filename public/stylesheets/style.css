@@ -36,8 +36,8 @@ body {
 }
 
 .survey {
-
-  padding: 50px;
+  color: #757575;
+  padding: 10px 50px;
   margin: 50px auto;
   width: 100%;
   background-color: #fff;
@@ -115,8 +115,11 @@ h1, input {
 .navbar-brand{
   font-size: xx-large;
   font-weight: bold;
-  font-family: cursive;
+  font-family: 'Raleway', sans-serif;
+}
 
+.navbar-inverse .navbar-brand {
+  color: #fff;
 }
 
 .centerme {
@@ -127,4 +130,5 @@ h1, input {
 
 .survey-label {
   color: #757575;
+  text-align: left;
 }

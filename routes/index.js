@@ -14,6 +14,10 @@ router.get('/main-vol', function(req, res, next) {
   res.render('main-vol', { title: 'main-vol' });
 });
 
+router.get('/signup', function(req, res, next) {
+  res.render('signup', { title: 'Sign Up' });
+});
+
 
 router.get('/progress-student', function(req, res, next) {
   res.render('progress-student', { title: 'progress-student' });
