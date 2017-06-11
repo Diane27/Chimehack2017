@@ -4,7 +4,7 @@ var buttonRef = document.querySelector('#ref');
 var buttonVol = document.querySelector('#vol');
 
 ref.classList.add('hid');
-//vol.classList.add('hid');
+vol.classList.add('hid');
 
 
 buttonRef.onclick = function() {

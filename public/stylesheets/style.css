@@ -1,5 +1,7 @@
 .hid {
   display: none !important;
+  padding:0;
+  margin:0;
 }
 
 
@@ -42,6 +44,10 @@ body {
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+#refugee-survey .hid {
+  padding: 0px;
 }
 
 h1 {
