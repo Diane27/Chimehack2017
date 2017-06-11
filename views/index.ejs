@@ -26,14 +26,50 @@
         <div>
           <nav id="myNavbar" class="navbar" role="navigation">
             <div class="container">
+            	<div class="navbar-header">
+            		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>                        
+				    </button>
+                	<a class="navbar-brand" href="">RefuGeenius</a>
+                </div>
             	<div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a id="reportButton" onclick="openNav()">Report</a></li>
-                  <li><a href = "/about/">How to Use</a></li>
-                  <li><a href = "about.html">About</a></li>
+                  <form id="signin" class="navbar-form navbar-right" role="form">
+	 
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input class="form-control" name="email" value="" placeholder="Phone Number">                                        
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">   
+                  </div>
+
+                        <button type="submit" class="btn btn-primary">Login</button>
+                   </form>
                 </ul>
               </div>
             </div>
+            <div class="container" >
+    <div class="col-md-6" >
+        <div id="logbox"  >
+            <form id="signup" method="post" action="/signup" >
+                <h1>Create an Account</h1>
+				 <input placeholder="Phone Number" class="input pass"/>
+                <input name="user[password]" type="password" placeholder="Choose a password" required="required" class="input pass"/>
+                <input name="user[password2]" type="password" placeholder="Confirm password" required="required" class="input pass"/>
+                <input type="submit" value="Sign me up!" class="inputButton"/>
+
+            </form>
+        </div>
+    </div>
+    <!--col-md-6-->
+
+
+</div>
           </nav>
         </div>
       </header>
