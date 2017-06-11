@@ -45,15 +45,17 @@ router.get('/main-vol-files', function(req, res, next) {
 
 // SIGNUP
 router.post('/signmeup', function(req, res, next) {
+  console.log(req.body);
   // Connect to DB.
   MongoClient.connect(dburl, function(err, db) {
     if (err) return console.log(err);
 
     // Document format.
-    var user = {phoneNumber: req.body.phoneNumber,
-                password: req.body.password,
-                userType: "refugee",
-                info: null};
+    var user = {"phoneNumber": req.body.phoneNumber,
+                "userName": req.body.userName,
+                "password": req.body.password,
+                "userType": "refugee",
+                "info": "null"};
 
     // Add to database.
     db.collection("users").insertOne(user, function(err, res) {
