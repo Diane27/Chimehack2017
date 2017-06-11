@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>RefuGeenius Website</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- Bootstrap -->
+	<link href="stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="stylesheets/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+
+	<!-- Bootstrap Date-Picker Plugin -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+	<!-- Bootstrap Form Helpers -->
+	 <link href="stylesheets/bootstrap-form-helpers.min.css" rel="stylesheet" media="screen">
+</head>
+<body>
+	<!-- NAVBAR -->
+	<nav id="myNavbar" class="navbar navbar-inverse" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="">RefuGeenius</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="nav navbar-nav navbar-right">
+					<form id="signin" class="navbar-form navbar-right" role="form">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+							<input class="form-control" name="email" value="" placeholder="Phone Number">
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+							<input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">
+						</div>
+						<button type="submit" class="btn btn-primary">Login</button>
+					</form>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- BODY -->
+	<div class="container">
+
+		<!-- LOGIN BOX -->
+		<div class="col-lg-4" >
+			<div id="logbox">
+				<form id="signup" method="post" action="/signup">
+					<h1><small>Step 1.</small></h1>
+					<h1><b>Create an Account</b></h1>
+					<input name="phoneNumber" type="tel" placeholder="Phone Number" class="input pass"/>
+					<input name="userName" type="name" placeholder="Full Name" required="required" class="input pass"/>
+					<input name="password" type="password" placeholder="Password" required="required" class="input pass"/>
+					<br>
+					<div class="centerme">
+						<p>What's your role?</p>
+						<label id="ref" class="radio-inline"><input type="radio" name="optradio"><b>Refugee</b></label>
+						<label id="vol" class="radio-inline"><input type="radio" name="optradio"><b>Volunteer</b></label>
+					</div>
+					<br>
+					<br>
+					<!--<input type="submit" value="Sign me up!" class="inputButton"/>-->
+				</form>
+			</div>
+		</div>
+		<!-- END OF LOGIN BOX -->
+
+		<!-- REFUGEE SURVEY BOX -->
+		<div id="refugee-survey" class="col-lg-8 hid">
+			<div class ="survey">
+				<h3>Hello there, Please take a minute to fill this out!</h3>
+				<div class="container">
+					<form class="form-horizontal">
+						<fieldset>
+							<!-- Text input-->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="project">Name</label>
+								<div class="col-md-4">
+									<input id="project" name="project" type="text" placeholder="Name" class="form-control input-md"
+								</div>
+							</div>
+							<!-- Text input-->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="project">What Country are you from?</label>
+								<div class="col-md-4">
+									<input id="project" name="project" type="text" placeholder="Country" class="form-control input-md"
+								</div>
+							</div>
+							<div class="form-group">
+								<!-- Date input -->
+								<label class="control-label" for="date">Date of birth</label>
+								<input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+							</div>
+							<!-- Text input-->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="project">What Country are you from?</label>
+								<div class="col-md-4">
+									<input id="project" name="project" type="text" placeholder="Country" class="form-control input-md"
+								</div>
+							</div>
+							<!-- Text input-->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="phone">Phone:</label>
+								<div class="col-md-4">
+									<input id="phone" name="phone" type="text" placeholder="(555) 555 - 5555" class="form-control input-md">
+								</div>
+							</div>
+							<!-- Multiple Checkboxes -->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="useageboxes">What do you need help for?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="useageboxes-0">
+											<input type="checkbox" name="useageboxes" id="useageboxes-0" value="">
+											Academics
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="useageboxes-1">
+											<input type="checkbox" name="useageboxes" id="useageboxes-1" value="">
+											Mentor
+										</label>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+
+		</div>
+		<!-- END OF REFUGEE SURVEY BOX -->
+
+		<!-- VOLUNTEER SURVEY BOX -->
+		<div id="volunteer-survey" class="col-lg-8 hid">
+			<div class ="survey">
+				<form id="signup" method="post" action="/signup">
+					<h1><small>Step 2.</small></h1>
+					<h1><b>Fill out the Survey</b></h1>
+					<br>
+					<div class="form-group">
+				    <label class="survey-label" for="countryInput">Where are you from?</label>
+				    <div id="countryInput" class="bfh-selectbox bfh-countries" data-country="US" data-flags="true"></div>
+				  </div>
+					<div class="form-group">
+						<label class="survey-label" for="languageInput">What languages can you speak?</label>
+						<select multiple class="form-control bfh-languages" data-language="en" data-available="en,es,ar,ne,so,my,hy,zh,ps,fa,fr,pt,pa,ru,tr,ta,ur,vi"></select>
+					</div>
+					<div class="form-group">
+						<label class="survey-label" for="countryInput">How do you want to contribute?</label>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"><b>Academic</b>
+								<p>Blabla</p>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"><b>Mentorship</b>
+								<p>Blabla</p>
+							</label>
+						</div>
+					</div>
+					<input name="password" type="password" placeholder="Password" required="required" class="input pass"/>
+					<br>
+					<div class="centerme">
+						<p>What's your role?</p>
+						<label id="ref" class="radio-inline"><input type="radio" name="optradio"><b>Refugee</b></label>
+						<label id="vol" class="radio-inline"><input type="radio" name="optradio"><b>Volunteer</b></label>
+					</div>
+					<br>
+					<br>
+					<!--<input type="submit" value="Sign me up!" class="inputButton"/>-->
+				</form>
+			</div>
+
+		</div>
+		<!-- END OF VOLUNTEER SURVEY BOX -->
+
+	</div>
+	<!-- END OF BODY -->
+
+	<!-- SCRIPTS -->
+	<!-- jQuery -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Bootstrap Form Helpers -->
+	<script src="js/bootstrap-formhelpers.js"></script>
+	<script src="js/index.js"></script>
+
+</body>
+</html>
