@@ -1,0 +1,19 @@
+
+body {
+  background-image: url("../img/bln7.jpg");
+  background-position: top left, center center;
+  background-size: 100%;
+}
+
+h1{
+	color: #FFF;
+}
+
+.texts {
+	text-align: center;
+}
+
+.button {
+	width: 100%;
+	margin: 0 auto;
+}
