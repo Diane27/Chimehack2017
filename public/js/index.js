@@ -1,19 +1,20 @@
-var survey = document.querySelectorAll('.jumbotron');
-var buttonRef = document.querySelector('.ref');
-var buttonVol = document.querySelector('.vol');
+var ref = document.querySelector('#refugee-survey');
+var vol = document.querySelector('#volunteer-survey');
+var buttonRef = document.querySelector('#ref');
+var buttonVol = document.querySelector('#vol');
 
-survey[0].classList.add('hid');
-survey[1].classList.add('hid');
+ref.classList.add('hid');
+//vol.classList.add('hid');
 
 
 buttonRef.onclick = function() {
 
-       survey[1].classList.add('hid');
-       survey[0].classList.remove('hid');
+       vol.classList.add('hid');
+       ref.classList.remove('hid');
 }
 
 buttonVol.onclick = function() {
 
-       survey[0].classList.add('hid');
-       survey[1].classList.remove('hid');
+       ref.classList.add('hid');
+       vol.classList.remove('hid');
 }

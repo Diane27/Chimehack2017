@@ -33,7 +33,7 @@ body {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
 
-#survey {
+.survey {
 
   padding: 50px;
   margin: 50px auto;
