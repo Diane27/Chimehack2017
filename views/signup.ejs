@@ -64,12 +64,12 @@
 		<!-- LOGIN BOX -->
 		<div class="col-lg-4" >
 			<div id="logbox">
-				<form id="signupForm" method="post" action="/signup">
+				<form id="signupForm" method="post" action="">
 					<h1><small>Step 1.</small></h1>
 					<h1><b>Create an Account</b></h1>
 					<input id="phoneNumber" type="tel" placeholder="Phone Number" class="input pass"/>
-					<input id="userName" type="name" placeholder="Full Name" required="required" class="input pass"/>
-					<input id="password" type="password" placeholder="Password" required="required" class="input pass"/>
+					<input id="userName" type="name" placeholder="Full Name" class="input pass"/>
+					<input id="password" type="password" placeholder="Password" class="input pass"/>
 					<br>
 					<div class="centerme">
 						<p>What's your role?</p>
@@ -87,7 +87,7 @@
 		<!-- REFUGEE SURVEY BOX -->
 		<div id="refugee-survey" class="col-lg-8 hid">
 			<div class ="survey">
-				<form id="refugeeForm" method="post" action="/signup">
+				<form id="refugeeForm">
 					<h1><small>Step 2.</small></h1>
 					<h1><b>Fill out the Survey</b></h1>
 					<br>
@@ -99,7 +99,7 @@
 				  </div>
 					<div class="form-group">
 						<label class="survey-label" for="campInput">Which camp are you from?</label>
-						<input name="campName" type="name" placeholder="" required="required" class="form-control"/>
+						<input id="campName" type="name" placeholder="" class="form-control"/>
 					</div>
 					<div class="form-group">
 						<label class="survey-label" for="languageInput">What languages can you speak?</label>
@@ -131,7 +131,7 @@
 						</select>
 						<small>Hold ctrl to select more than one.</small>
 					</div>
-					<input type="submit" value="Sign me up!" class="inputButton" onclick="submitRefugeeForms()"/>
+					<button class="inputButton" onclick="submitRefugeeForms()">Sign me up!</button>
 				</form>
 			</div>
 
@@ -141,7 +141,7 @@
 		<!-- VOLUNTEER SURVEY BOX -->
 		<div id="volunteer-survey" class="col-lg-8 hid">
 			<div class ="survey">
-				<form id="volunteerForm" method="post" action="/signup">
+				<form id="volunteerForm" method="post" action="">
 					<h1><small>Step 2.</small></h1>
 					<h1><b>Fill out the Survey</b></h1>
 					<br>
@@ -209,9 +209,9 @@
 
 	<!-- Submit -->
 	<script>
-	submitRefugeeForms = function() {
-		console.log("WOW");
-	}
+		function submitRefugeeForms() {
+			SubmitMyForm();
+		}
 	</script>
 
 
@@ -224,6 +224,7 @@
 	<!-- Bootstrap Form Helpers -->
 	<script src="js/bootstrap-formhelpers.js"></script>
 	<script src="js/index.js"></script>
+	<script src="js/signup.js"></script>
 
 </body>
 </html>
