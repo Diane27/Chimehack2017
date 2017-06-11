@@ -20,7 +20,7 @@
 	<!-- Bootstrap -->
 	<link href="stylesheets/bootstrap.min.css" rel="stylesheet">
 	<link href="stylesheets/style.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
 
 </head>
@@ -34,22 +34,22 @@
             		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>                        
+				        <span class="icon-bar"></span>
 				    </button>
                 	<a class="navbar-brand" href="">RefuGeenius</a>
                 </div>
             	<div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="nav navbar-nav navbar-right">
                   <form id="signin" class="navbar-form navbar-right" role="form">
-	 
+
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input class="form-control" name="email" value="" placeholder="Phone Number">                                        
+                            <input class="form-control" name="email" value="" placeholder="Phone Number">
                         </div>
 
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                            <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">   
+                            <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">
                   </div>
 
                         <button type="submit" class="btn btn-primary">Login</button>
@@ -69,10 +69,10 @@
 			                <input name="user[password2]" type="password" placeholder="Confirm password" required="required" class="input pass"/>
 			                <div class="container" >
     							<div>
-			                		<input type="radio" name="gender" value="female">Refugee<br>
+			                		<input type="radio" name="gender" class="ref" value="female">Refugee<br>
 			                	</div>
 			                	<div>
-			                		<input type="radio" name="gender" value="female">Volunteer<br>
+			                		<input type="radio" name="gender" class="vol" value="female">Volunteer<br>
 			                	</div>
 			                </div>
 			                <input type="submit" value="Sign me up!" class="inputButton"/>
@@ -80,19 +80,29 @@
             			</form>
         			</div>
     			</div>
-    			<div class="jumbotron">
+    			<div class="jumbotron hid">
 	  				<div class="col-md-8">
 	  					<h1><b>Refugee's Survey</b></h1>
 	    				<p>content of the survey</p>
 	  				</div>
 				</div>
-    			
+
+        <div class="jumbotron hid">
+          <div class="col-md-8">
+            <h1><b>Volunteer's Survey</b></h1>
+            <p>content of the survey</p>
+          </div>
+      </div>
+
 			</div>
 		</div>
-          
+
         </div>
       </header>
     </div>
+
+    <script src="js/index.js"></script>
+
 </body>
 
 
