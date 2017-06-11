@@ -10,18 +10,25 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-/* POST home page. */
+// SIGNUP
 router.post('/signup', function(req, res, next) {
+  // Connect to DB.
   MongoClient.connect(dburl, function(err, db) {
-  if (err) return console.log(err);
-  var user = {phoneNumber: req.body.phoneNumber,
-              password: req.body.password};
-  db.collection("user").insertOne(user, function(err, res) {
     if (err) return console.log(err);
-    db.close();
-  });
-});
 
+    // Document format.
+    var user = {phoneNumber: req.body.phoneNumber,
+                password: req.body.password};
+
+    // Add to database.
+    db.collection("user").insertOne(user, function(err, res) {
+      if (err) return console.log(err);
+      db.close();
+    });
+
+  });
+
+  // Change this line to the next page after signup.
   res.send("Signup Successful");
 });
 
