@@ -132,3 +132,19 @@ h1, input {
   color: #757575;
   text-align: left;
 }
+
+#maintext {
+  height: 90vh;
+  width: 100%;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.centerontainer {
+    min-height: 10em;
+    display: table-cell;
+    vertical-align: middle }

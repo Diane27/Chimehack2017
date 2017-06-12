@@ -70,5 +70,26 @@ router.post('/signmeup', function(req, res, next) {
   return res.redirect('/main');
 });
 
+// match
+router.post('/matchme', function(req, res, next) {
+  // Connect to DB.
+  MongoClient.connect(url, function(err, db) {
+    if (err) return console.err(err);
+    var query = { language: "german" };
+    db.collection("users").find(query).toArray(function(err, result) {
+      if (err) return console.err(err);
+
+      var matches = document.querySelectorAll(".producttitle");
+
+      for (var i = 0; i < 2; i++)
+      {
+        matches[i].innerHTML = result[i].userName;
+      }
+    });
+  });
+
+  // Change this line to the next page after signup.
+  return res.redirect('/main');
+});
 
 module.exports = router;
